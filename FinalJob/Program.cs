@@ -35,6 +35,7 @@ void FinderFreeSimvols (String [] value)
             temp++;
         }
     }
-    foreach (string i in array)Console.WriteLine(i);
+    if (array.Length > 0) Console.WriteLine("[\"" + String.Join("\", \"", array) + "\"]");
+    else Console.WriteLine("[]");
 }
 FinderFreeSimvols(array);
