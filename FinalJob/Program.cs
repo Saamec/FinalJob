@@ -7,8 +7,22 @@ try
 }catch(Exception ex) { Console.WriteLine("Введено не число"); }
 int count = 0;
 String [] array = new String [countMass];
+Console.WriteLine("Вводите строки массива через ENTER");
 while (count != countMass)
 {
     array [count] = Console.ReadLine();
     count++;
+}
+//foreach (String s in array)Console.WriteLine(s);
+
+void FinderFreeSimvols (String [] value)
+{
+    int count = 0;
+    for (int i = 0; i < value.Length; i++)
+    {
+        if (value [i].Length >= 3)
+        {
+            count++;
+        }
+    }
 }
