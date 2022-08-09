@@ -20,9 +20,21 @@ void FinderFreeSimvols (String [] value)
     int count = 0;
     for (int i = 0; i < value.Length; i++)
     {
-        if (value [i].Length >= 3)
+        if (value [i].Length <= 3)
         {
             count++;
         }
     }
+    String [] array = new String [count];
+    int temp = 0;
+    for (int i = 0; i < value.Length; i++)
+    {
+        if(value [i].Length <= 3)
+        {
+            array[temp] = value [i];
+            temp++;
+        }
+    }
+    foreach (string i in array)Console.WriteLine(i);
 }
+FinderFreeSimvols(array);
